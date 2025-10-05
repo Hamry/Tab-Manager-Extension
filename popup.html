@@ -5,20 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./popup.css" />
+    <title>Tab Manager</title>
   </head>
   <body>
+    <div class="container">
+      <div class="settings-container">
+        <h3>Tab Limit</h3>
+        <div class="setting-controls">
+          <input type="range" id="tab-limit-slider" min="1" max="50" value="10" />
+          <input type="number" id="tab-limit-number" min="1" max="50" value="10" />
+        </div>
+      </div>
+
+      <div class="tabs-container">
+        <h3>Recently Closed</h3>
+        <ul id="recently-closed-list">
+          <!-- Recently closed tabs will be populated here -->
+        </ul>
+      </div>
+    </div>
+
     <template id="li_template">
       <li>
-        <a>
-          <h3 class="title">Tab Title</h3>
-          <p class="pathname">Tab Pathname</p>
+        <a href="#" target="_blank">
+          <p class="tab-title"></p>
         </a>
       </li>
     </template>
-
-    <h1>Google Dev Docs</h1>
-    <button>Group Tabs</button>
-    <ul></ul>
 
     <script src="./popup.js" type="module"></script>
   </body>

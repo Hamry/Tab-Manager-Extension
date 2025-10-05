@@ -1,25 +1,108 @@
 body {
-  width: 20rem;
-  background-color: blue;
-}
-
-ul {
-  list-style-type: none;
-  padding-inline-start: 0;
-  margin: 1rem 0;
-}
-
-li {
-  padding: 0.25rem;
-}
-li:nth-child(odd) {
-  background: #fe000030;
-}
-li:nth-child(even) {
-  background: #ffffff;
-}
-
-h3,
-p {
+  width: 25rem;
+  background-color: #f4f4f9;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  border-radius: 1rem;
+  padding: 1rem;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.settings-container,
+.tabs-container {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.setting-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#tab-limit-slider {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.5rem;
+  background: #ddd;
+  outline: none;
+  border-radius: 1rem;
+}
+
+#tab-limit-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #5a95ff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#tab-limit-slider::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #5a95ff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#tab-limit-number {
+  width: 4rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#recently-closed-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#recently-closed-list li {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+#recently-closed-list li:last-child {
+  border-bottom: none;
+}
+
+#recently-closed-list li:hover {
+  background-color: #e9f2ff;
+}
+
+#recently-closed-list a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.tab-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
